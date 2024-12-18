@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.example.dev18final.util.TestUtil.createCustomerRequest;
 
-
 class CustomerLifecycleIT extends BaseIT {
 
     @Test
@@ -52,6 +51,5 @@ class CustomerLifecycleIT extends BaseIT {
                 .usingRecursiveComparison()
                 .ignoringFields("email", "dateOfBirth", "loyaltyPoints", "password")
                 .isEqualTo(customerCreateRequest);
-
     }
 }
