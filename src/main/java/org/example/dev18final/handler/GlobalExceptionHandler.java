@@ -16,20 +16,20 @@ public class GlobalExceptionHandler {
     @ResponseBody
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ErrorResponse handleException(EntityNotFoundException exception) {
-        return new ErrorResponse(HttpStatus.NOT_FOUND.name(), exception.getMessage());
+        return new ErrorResponse(HttpStatus.NOT_FOUND.name(), HttpStatus.NOT_FOUND.value(),  exception.getMessage());
     }
 
     @ExceptionHandler(value = OptimisticLockException.class)
     @ResponseBody
     @ResponseStatus(HttpStatus.CONFLICT)
     public ErrorResponse handleException(OptimisticLockException exception) {
-        return new ErrorResponse(HttpStatus.CONFLICT.name(), exception.getMessage());
+        return new ErrorResponse(HttpStatus.CONFLICT.name(), HttpStatus.CONFLICT.value(), exception.getMessage());
     }
 
     @ExceptionHandler(value = Throwable.class)
     @ResponseBody
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     public ErrorResponse handleException(Throwable exception) {
-        return new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.name(), exception.getMessage());
+        return new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.name(), HttpStatus.INTERNAL_SERVER_ERROR.value(), exception.getMessage());
     }
 }

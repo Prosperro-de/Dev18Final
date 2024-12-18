@@ -1,7 +1,10 @@
 package org.example.dev18final.model.dto.request;
 
+import lombok.Builder;
+
 import java.time.LocalDate;
 
+@Builder
 public record CustomerUpdateRequest(String firstName,
                              String lastName,
                              String telNumber,

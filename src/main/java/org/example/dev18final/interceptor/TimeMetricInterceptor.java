@@ -1,9 +1,14 @@
 package org.example.dev18final.interceptor;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.example.dev18final.model.dto.ErrorResponse;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.time.Instant;
 
@@ -19,5 +24,28 @@ public class TimeMetricInterceptor {
         System.out.println("Method " + joinPoint.getSignature().getName() +
                            " executed in " + resultedTime + " ms");
         return result;
+    }
+
+    @AfterReturning(value = """
+                        within(@org.springframework.web.bind.annotation.ControllerAdvice *)
+                        && !args(jakarta.persistence.OptimisticLockException)""",
+            returning = "errorResponse")
+    public void countErrorResponses(ErrorResponse errorResponse) {
+        HttpServletRequest currentRequest = getCurrentRequest();
+        String path = currentRequest.getServletPath();
+        if (is4xxErrorCode(errorResponse)) {
+            System.out.println("Sending error event for 4xx response for path " + path);
+        } else {
+            System.out.println("Sending error event for 5xx response for path " + path);
+        }
+    }
+
+    private static boolean is4xxErrorCode(ErrorResponse errorResponse) {
+        return errorResponse.errorCode() >= 400 && errorResponse.errorCode() < 500;
+    }
+
+    private HttpServletRequest getCurrentRequest() {
+        return ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes())
+                .getRequest();
     }
 }
