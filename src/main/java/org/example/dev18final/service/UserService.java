@@ -1,14 +1,14 @@
 package org.example.dev18final.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.module18.exception.EntityNotFoundException;
-import org.example.module18.model.Customer;
-import org.example.module18.model.CustomerDetails;
-import org.example.module18.model.User;
-import org.example.module18.model.dto.request.CustomerCreateRequest;
-import org.example.module18.model.dto.request.UserLoginRequest;
-import org.example.module18.repository.RoleRepository;
-import org.example.module18.repository.UserRepository;
+import org.example.dev18final.exception.EntityNotFoundException;
+import org.example.dev18final.model.Customer;
+import org.example.dev18final.model.CustomerDetails;
+import org.example.dev18final.model.User;
+import org.example.dev18final.model.dto.request.CustomerCreateRequest;
+import org.example.dev18final.model.dto.request.UserLoginRequest;
+import org.example.dev18final.repository.RoleRepository;
+import org.example.dev18final.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

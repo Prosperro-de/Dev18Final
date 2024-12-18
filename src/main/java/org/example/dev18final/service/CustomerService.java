@@ -1,11 +1,11 @@
 package org.example.dev18final.service;
 
-import org.example.module18.exception.EntityNotFoundException;
-import org.example.module18.mapper.CustomerMapper;
-import org.example.module18.model.Customer;
-import org.example.module18.model.dto.request.CustomerUpdateRequest;
-import org.example.module18.model.dto.response.CustomerResponse;
-import org.example.module18.repository.CustomerRepository;
+import org.example.dev18final.exception.EntityNotFoundException;
+import org.example.dev18final.mapper.CustomerMapper;
+import org.example.dev18final.model.Customer;
+import org.example.dev18final.model.dto.request.CustomerUpdateRequest;
+import org.example.dev18final.model.dto.response.CustomerResponse;
+import org.example.dev18final.repository.CustomerRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;

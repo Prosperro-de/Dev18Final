@@ -1,6 +1,6 @@
 package org.example.dev18final.repository;
 
-import org.example.module18.model.Role;
+import org.example.dev18final.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

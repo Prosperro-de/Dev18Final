@@ -1,10 +1,10 @@
 package org.example.dev18final.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.module18.model.dto.request.CustomerCreateRequest;
-import org.example.module18.model.dto.request.UserLoginRequest;
-import org.example.module18.service.UserService;
-import org.example.module18.util.JwtUtil;
+import org.example.dev18final.model.dto.request.CustomerCreateRequest;
+import org.example.dev18final.model.dto.request.UserLoginRequest;
+import org.example.dev18final.service.UserService;
+import org.example.dev18final.util.JwtUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

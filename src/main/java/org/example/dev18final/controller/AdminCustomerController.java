@@ -1,7 +1,7 @@
 package org.example.dev18final.controller;
 
 import lombok.AllArgsConstructor;
-import org.example.module18.service.CustomerService;
+import org.example.dev18final.service.CustomerService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;

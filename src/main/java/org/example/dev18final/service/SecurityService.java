@@ -1,6 +1,6 @@
 package org.example.dev18final.service;
 
-import org.example.module18.security.CustomUserDetails;
+import org.example.dev18final.security.CustomUserDetails;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;

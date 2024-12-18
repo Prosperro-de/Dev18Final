@@ -1,8 +1,8 @@
 package org.example.dev18final.handler;
 
 import jakarta.persistence.OptimisticLockException;
-import org.example.module18.exception.EntityNotFoundException;
-import org.example.module18.model.dto.ErrorResponse;
+import org.example.dev18final.exception.EntityNotFoundException;
+import org.example.dev18final.model.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

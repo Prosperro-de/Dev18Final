@@ -1,8 +1,8 @@
 package org.example.dev18final.mapper;
 
-import org.example.module18.model.Customer;
-import org.example.module18.model.dto.request.CustomerCreateRequest;
-import org.example.module18.model.dto.response.CustomerResponse;
+import org.example.dev18final.model.Customer;
+import org.example.dev18final.model.dto.request.CustomerCreateRequest;
+import org.example.dev18final.model.dto.response.CustomerResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValuePropertyMappingStrategy;

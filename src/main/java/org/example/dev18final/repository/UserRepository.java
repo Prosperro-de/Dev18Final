@@ -1,6 +1,6 @@
 package org.example.dev18final.repository;
 
-import org.example.module18.model.User;
+import org.example.dev18final.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

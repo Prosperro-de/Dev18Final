@@ -11,7 +11,7 @@ import java.time.Instant;
 @Aspect
 public class TimeMetricInterceptor {
 
-    @Around("@annotation(org.example.module18.annotation.TimeMetric)")
+    @Around("@annotation(org.example.dev18final.annotation.TimeMetric)")
     public Object processMetric(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = Instant.now().toEpochMilli();
         Object result = joinPoint.proceed();

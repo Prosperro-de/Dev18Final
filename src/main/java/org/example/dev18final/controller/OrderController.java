@@ -1,10 +1,10 @@
 package org.example.dev18final.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.module18.model.dto.request.OrderCreateRequest;
-import org.example.module18.model.dto.request.OrderUpdateRequest;
-import org.example.module18.model.dto.response.OrderResponse;
-import org.example.module18.service.OrderService;
+import org.example.dev18final.model.dto.request.OrderCreateRequest;
+import org.example.dev18final.model.dto.request.OrderUpdateRequest;
+import org.example.dev18final.model.dto.response.OrderResponse;
+import org.example.dev18final.service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,10 +1,10 @@
 package org.example.dev18final.config;
 
 import lombok.RequiredArgsConstructor;
-import org.example.module18.model.User;
-import org.example.module18.security.CustomUserDetails;
-import org.example.module18.security.JwtRequestFilter;
-import org.example.module18.service.UserService;
+import org.example.dev18final.model.User;
+import org.example.dev18final.security.CustomUserDetails;
+import org.example.dev18final.security.JwtRequestFilter;
+import org.example.dev18final.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
